@@ -10,7 +10,11 @@ import { useLanguage } from "@/contexts/LanguageContext"
 import { Download } from "lucide-react"
 import { Button } from "./ui/button"
 
-export function DownloadResumeDropdown() {
+type DownloadResumeDropdownProps = {
+  children: React.ReactNode
+}
+
+export const DownloadResumeDropdown = ({ children }: DownloadResumeDropdownProps) => {
   const { language } = useLanguage()
 
   return (

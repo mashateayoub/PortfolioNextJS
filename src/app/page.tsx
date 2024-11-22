@@ -20,25 +20,13 @@ import { getPortfolioData } from '@/lib/data'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import { Download, Mail, Menu, Phone, X } from 'lucide-react'
 import Image from 'next/image'
+import Link from "next/link"
 import { useEffect, useState } from 'react'
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-}
 
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
-}
 
 export default function Portfolio() {
-  const { language, setLanguage } = useLanguage()
+  const { language } = useLanguage()
   const data = getPortfolioData(language)
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
@@ -95,21 +83,22 @@ export default function Portfolio() {
 
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
               {["skills", "experience", "projects", "contact"].map((tab) => (
-                <a
+                <Link 
                   key={tab}
                   href={`#${tab}`}
-                  className={`transition-colors hover:text-primary ${activeTab === tab ? "text-primary" : "text-muted-foreground"
-                    }`}
+                  className={`transition-colors hover:text-primary ${activeTab === tab ? "text-primary" : "text-muted-foreground"}`}
                 >
                   {data.ui.nav[tab as keyof typeof data.ui.nav]}
-                </a>
+                </Link>
               ))}
             </nav>
 
             <div className="hidden md:flex items-center gap-4">
               <LanguageToggle />
               <ThemeToggle />
-              <DownloadResumeDropdown text={data.ui.buttons.downloadResume} />
+              <DownloadResumeDropdown>
+                {data.ui.buttons.downloadResume}
+              </DownloadResumeDropdown>
             </div>
           </div>
 
@@ -117,15 +106,14 @@ export default function Portfolio() {
             <div className="md:hidden py-4">
               <nav className="flex flex-col space-y-4">
                 {["skills", "experience", "projects", "contact"].map((tab) => (
-                  <a
+                  <Link
                     key={tab}
                     href={`#${tab}`}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`transition-colors hover:text-primary ${activeTab === tab ? "text-primary" : "text-muted-foreground"
-                      }`}
+                    className={`transition-colors hover:text-primary ${activeTab === tab ? "text-primary" : "text-muted-foreground"}`}
                   >
                     {data.ui.nav[tab as keyof typeof data.ui.nav]}
-                  </a>
+                  </Link>
                 ))}
               </nav>
               <div className="flex items-center gap-4 mt-4 pt-4 border-t">

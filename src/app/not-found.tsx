@@ -1,8 +1,8 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { useRouter } from "next/navigation"
 import { motion } from "framer-motion"
+import { useRouter } from "next/navigation"
 
 export default function NotFound() {
   const router = useRouter()
@@ -20,7 +20,7 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-muted-foreground mt-2 max-w-md">
-            The page you're looking for doesn't exist or has been moved.
+            The page you are looking for does not exist or has been moved.
           </p>
         </motion.div>
 
