@@ -1,0 +1,106 @@
+{
+    "personalInfo": {
+      "name": "مشاط أيوب",
+      "title": "مطور الويب الشامل Java/JEE",
+      "bio": "مطور ويب شامل متحمس مع خبرة في تقنيات Java/JEE. خبرة في إنشاء وتطوير التطبيقات والمنصات الداخلية، مع خلفية قوية في علوم الكمبيوتر وذكاء الأعمال.",
+      "email": "mashateayoub@gmail.com",
+      "phone": "(+212)655-699797",
+      "image": "/images/profile.jpg"
+    },
+    "skills": [
+      { "name": "Java/JEE", "level": 90 },
+      { "name": "Spring", "level": 85 },
+      { "name": "Python", "level": 80 },
+      { "name": "React", "level": 75 },
+      { "name": "SQL", "level": 85 },
+      { "name": "تحليل البيانات", "level": 80 }
+    ],
+    "technologies": [
+      "Java 8/11",
+      "Primefaces",
+      "JSF",
+      "Hibernate",
+      "Spring",
+      "React",
+      "Python"
+    ],
+    "experience": [
+      {
+        "title": "مطور الويب الشامل Java/J2EE",
+        "company": "Electric-It Services/TGCC",
+        "location": "الدار البيضاء",
+        "period": "أغسطس 2023 - فبراير 2024",
+        "responsibilities": [
+          "إنشاء وتطوير التطبيقات والمنصات الداخلية باستخدام Java 8/11 وPrimefaces وJSF وHibernate وSpring",
+          "المساعدة في نشر وترحيل وتكوين المنصات الجديدة",
+          "تتبع وإصلاح الأخطاء؛ إعادة هيكلة الكود لتحسين الكفاءة وقابلية الصيانة"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "ماجستير في ذكاء الأعمال (BI)",
+        "institution": "كلية العلوم والتقنيات، بني ملال",
+        "period": "سبتمبر 2021 - يونيو 2023",
+        "description": "المواد: تصميم وتحليل الخوارزميات، أنظمة التشغيل، التصميم والتطوير الموجه للكائنات، نظم إدارة قواعد البيانات، استكشاف وتحليل البيانات، التعلم الآلي، التحليل التنبؤي، تصور البيانات."
+      },
+      {
+        "degree": "إجازة في العلوم والتقنيات - علوم الحاسوب",
+        "institution": "كلية العلوم والتقنيات، بني ملال",
+        "period": "سبتمبر 2017 - يونيو 2021",
+        "description": "المواد: برمجة الويب، التصميم والتطوير الموجه للكائنات، نظم إدارة قواعد البيانات، هندسة البرمجيات، الشبكات."
+      }
+    ],
+    "projects": [
+      {
+        "title": "نظام المراقبة عن بعد للقلب",
+        "description": "استخدام شبكات بتري لنمذجة وتحليل وتحسين نظام المراقبة عن بعد للقلب لرسالة الماجستير."
+      },
+      {
+        "title": "Covoit'ici",
+        "description": "تطوير تطبيق ويب للمشاركة في الركوب باستخدام React وJAX-RS (J2EE) وTailwind CSS وMySQL."
+      },
+      {
+        "title": "استخراج مجموعات العناصر المتكررة باستخدام خوارزمية DECLAT",
+        "description": "تنفيذ خوارزمية DECLAT لتوليد قواعد الارتباط ومجموعات العناصر المتكررة في Python."
+      },
+      {
+        "title": "نظام توصية الفنادق",
+        "description": "تطوير نظام توصية للفنادق في Python باستخدام التصفية التعاونية والتصفية القائمة على المحتوى."
+      }
+    ],
+    "socialLinks": {
+      "github": "https://github.com/mashateayoub",
+      "linkedin": "https://linkedin.com/in/ayoubmashate",
+      "email": "mailto:mashateayoub@gmail.com",
+      "phone": "tel:+212655699797"
+    },
+    "ui": {
+      "nav": {
+        "skills": "المهارات",
+        "experience": "الخبرة",
+        "projects": "المشاريع",
+        "contact": "اتصل بي"
+      },
+      "buttons": {
+        "downloadResume": "تحميل السيرة الذاتية",
+        "sendMessage": "إرسال رسالة",
+        "getInTouch": "تواصل معي"
+      },
+      "contact": {
+        "name": "الاسم",
+        "email": "البريد الإلكتروني",
+        "message": "الرسالة",
+        "namePlaceholder": "اسمك",
+        "emailPlaceholder": "بريدك الإلكتروني",
+        "messagePlaceholder": "رسالتك",
+        "formDescription": "املأ النموذج أدناه وسأعود إليك في أقرب وقت ممكن."
+      },
+      "sections": {
+        "skills": "المهارات",
+        "experienceEducation": "الخبرة والتعليم",
+        "projects": "المشاريع",
+        "contact": "اتصل بي"
+      }
+    }
+  }

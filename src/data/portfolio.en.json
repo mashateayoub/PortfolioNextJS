@@ -1,0 +1,106 @@
+{
+    "personalInfo": {
+      "name": "MASHATE AYOUB",
+      "title": "Full-stack Java/JEE Developer",
+      "bio": "Passionate full-stack developer with expertise in Java/JEE technologies. Experienced in creating and developing internal applications and platforms, with a strong background in computer science and business intelligence.",
+      "email": "mashateayoub@gmail.com",
+      "phone": "(+212)655-699797",
+      "image": "/images/profile.jpg"
+    },
+    "skills": [
+      { "name": "Java/JEE", "level": 90 },
+      { "name": "Spring", "level": 85 },
+      { "name": "Python", "level": 80 },
+      { "name": "React", "level": 75 },
+      { "name": "SQL", "level": 85 },
+      { "name": "Data Analysis", "level": 80 }
+    ],
+    "technologies": [
+      "Java 8/11",
+      "Primefaces",
+      "JSF",
+      "Hibernate",
+      "Spring",
+      "React",
+      "Python"
+    ],
+    "experience": [
+      {
+        "title": "Full-stack Java/J2EE Developer",
+        "company": "Electric-It Services/TGCC",
+        "location": "Casablanca",
+        "period": "August 2023 – February 2024",
+        "responsibilities": [
+          "Creating and developing internal applications and platforms using Java 8/11, Primefaces, JSF, Hibernate, and Spring",
+          "Assisting in deployment, migration, and configuration of new platforms",
+          "Tracking and fixing bugs; Refactoring code to improve efficiency and maintainability"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master in Business Intelligence (BI)",
+        "institution": "Faculty of Sciences and Techniques, Beni Mellal",
+        "period": "September 2021 – June 2023",
+        "description": "Courses: Algorithm design and analysis, Operating systems, Object-oriented design and development, Database management systems, Data exploration and analysis, Machine learning, Predictive analysis, Data visualization."
+      },
+      {
+        "degree": "Bachelor in Sciences and Techniques - Computer Science",
+        "institution": "Faculty of Sciences and Techniques, Beni Mellal",
+        "period": "September 2017 – June 2021",
+        "description": "Courses: Web programming, Object-oriented design and development, Database management systems, Software engineering, Networking."
+      }
+    ],
+    "projects": [
+      {
+        "title": "Cardiographic Telemonitoring System",
+        "description": "Using Petri nets to model, analyze, and optimize a cardiographic telemonitoring system for the Master's thesis."
+      },
+      {
+        "title": "Covoit'ici",
+        "description": "Developed a carpooling web application using React, JAX-RS (J2EE), Tailwind CSS, and MySQL."
+      },
+      {
+        "title": "Frequent Itemset Extraction with DECLAT Algorithm",
+        "description": "Implemented the DECLAT algorithm for generating association rules and frequent itemsets in Python."
+      },
+      {
+        "title": "Hotel Recommendation System",
+        "description": "Developed a hotel recommendation system in Python using collaborative filtering and content-based filtering."
+      }
+    ],
+    "socialLinks": {
+      "github": "https://github.com/mashateayoub",
+      "linkedin": "https://linkedin.com/in/ayoubmashate",
+      "email": "mailto:mashateayoub@gmail.com",
+      "phone": "tel:+212655699797"
+    },
+    "ui": {
+      "nav": {
+        "skills": "Skills",
+        "experience": "Experience",
+        "projects": "Projects",
+        "contact": "Contact"
+      },
+      "buttons": {
+        "downloadResume": "Download Resume",
+        "sendMessage": "Send Message",
+        "getInTouch": "Get in touch"
+      },
+      "contact": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "Your email",
+        "messagePlaceholder": "Your message",
+        "formDescription": "Fill out the form below and I'll get back to you as soon as possible."
+      },
+      "sections": {
+        "skills": "Skills",
+        "experienceEducation": "Experience & Education",
+        "projects": "Projects",
+        "contact": "Contact Me"
+      }
+    }
+  }

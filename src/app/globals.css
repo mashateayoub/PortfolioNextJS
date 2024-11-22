@@ -2,20 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    /* Modern primary color - A beautiful green */
+    --primary: 142 76% 36%;
+    --primary-foreground: 355.7 100% 97.3%;
+    
+    /* Subtle secondary color */
+    --secondary: 142 5% 96%;
+    --secondary-foreground: 142 6% 10%;
+    
+    /* Muted tones */
+    --muted: 142 5% 96%;
+    --muted-foreground: 142 4% 46%;
+    
+    /* Accent colors */
+    --accent: 142 5% 96%;
+    --accent-foreground: 142 6% 10%;
+    
+    /* Destructive colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Border and input colors */
+    --border: 142 6% 90%;
+    --input: 142 6% 90%;
+    --ring: 142 76% 36%;
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Dark mode primary green */
+    --primary: 142 70% 50%;
+    --primary-foreground: 144.9 80.4% 10%;
+    
+    /* Dark mode secondary */
+    --secondary: 142 5% 25%;
+    --secondary-foreground: 0 0% 98%;
+    
+    /* Dark muted tones */
+    --muted: 142 5% 25%;
+    --muted-foreground: 142 5% 65%;
+    
+    /* Dark accent */
+    --accent: 142 5% 25%;
+    --accent-foreground: 0 0% 98%;
+    
+    /* Adjusted destructive for dark mode */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    
+    /* Dark borders and inputs */
+    --border: 142 5% 25%;
+    --input: 142 5% 25%;
+    --ring: 142 70% 50%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  section {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+[dir="rtl"] {
+  .flex-row {
+    flex-direction: row-reverse;
+  }
+  
+  .space-x-4 > * + * {
+    margin-right: 1rem;
+    margin-left: 0;
+  }
+  
+  .space-x-6 > * + * {
+    margin-right: 1.5rem;
+    margin-left: 0;
+  }
+  
+  .mr-2 {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+  
+  .pl-5 {
+    padding-right: 1.25rem;
+    padding-left: 0;
+  }
+
+  nav.space-x-6 {
+    gap: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

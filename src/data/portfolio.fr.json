@@ -1,0 +1,106 @@
+{
+    "personalInfo": {
+      "name": "MASHATE AYOUB",
+      "title": "Développeur Full-stack Java/JEE",
+      "bio": "Développeur full-stack passionné avec une expertise en technologies Java/JEE. Expérimenté dans la création et le développement d'applications et de plateformes internes, avec une solide formation en informatique et en business intelligence.",
+      "email": "mashateayoub@gmail.com",
+      "phone": "(+212)655-699797",
+      "image": "/images/profile.jpg"
+    },
+    "skills": [
+      { "name": "Java/JEE", "level": 90 },
+      { "name": "Spring", "level": 85 },
+      { "name": "Python", "level": 80 },
+      { "name": "React", "level": 75 },
+      { "name": "SQL", "level": 85 },
+      { "name": "Analyse de données", "level": 80 }
+    ],
+    "technologies": [
+      "Java 8/11",
+      "Primefaces",
+      "JSF",
+      "Hibernate",
+      "Spring",
+      "React",
+      "Python"
+    ],
+    "experience": [
+      {
+        "title": "Développeur Full-stack Java/J2EE",
+        "company": "Electric-It Services/TGCC",
+        "location": "Casablanca",
+        "period": "Août 2023 – Février 2024",
+        "responsibilities": [
+          "Création et développement d'applications et plateformes internes utilisant Java 8/11, Primefaces, JSF, Hibernate et Spring",
+          "Assistance au déploiement, à la migration et à la configuration de nouvelles plateformes",
+          "Suivi et correction des bugs; Refactorisation du code pour améliorer l'efficacité et la maintenabilité"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master en Business Intelligence (BI)",
+        "institution": "Faculté des Sciences et Techniques, Béni Mellal",
+        "period": "Septembre 2021 – Juin 2023",
+        "description": "Cours : Conception et analyse d'algorithmes, Systèmes d'exploitation, Conception et développement orienté objet, Systèmes de gestion de bases de données, Exploration et analyse de données, Apprentissage automatique, Analyse prédictive, Visualisation de données."
+      },
+      {
+        "degree": "Licence en Sciences et Techniques - Informatique",
+        "institution": "Faculté des Sciences et Techniques, Béni Mellal",
+        "period": "Septembre 2017 – Juin 2021",
+        "description": "Cours : Programmation Web, Conception et développement orienté objet, Systèmes de gestion de bases de données, Génie logiciel, Réseaux."
+      }
+    ],
+    "projects": [
+      {
+        "title": "Système de Télésuivi Cardiographique",
+        "description": "Utilisation des réseaux de Petri pour modéliser, analyser et optimiser un système de télésuivi cardiographique pour le mémoire de Master."
+      },
+      {
+        "title": "Covoit'ici",
+        "description": "Développement d'une application web de covoiturage utilisant React, JAX-RS (J2EE), Tailwind CSS et MySQL."
+      },
+      {
+        "title": "Extraction d'Itemsets Fréquents avec l'Algorithme DECLAT",
+        "description": "Implémentation de l'algorithme DECLAT pour la génération de règles d'association et d'itemsets fréquents en Python."
+      },
+      {
+        "title": "Système de Recommandation d'Hôtels",
+        "description": "Développement d'un système de recommandation d'hôtels en Python utilisant le filtrage collaboratif et le filtrage basé sur le contenu."
+      }
+    ],
+    "socialLinks": {
+      "github": "https://github.com/mashateayoub",
+      "linkedin": "https://linkedin.com/in/ayoubmashate",
+      "email": "mailto:mashateayoub@gmail.com",
+      "phone": "tel:+212655699797"
+    },
+    "ui": {
+      "nav": {
+        "skills": "Compétences",
+        "experience": "Expérience",
+        "projects": "Projets",
+        "contact": "Contact"
+      },
+      "buttons": {
+        "downloadResume": "Télécharger CV",
+        "sendMessage": "Envoyer le message",
+        "getInTouch": "Contactez-moi"
+      },
+      "contact": {
+        "name": "Nom",
+        "email": "Email",
+        "message": "Message",
+        "namePlaceholder": "Votre nom",
+        "emailPlaceholder": "Votre email",
+        "messagePlaceholder": "Votre message",
+        "formDescription": "Remplissez le formulaire ci-dessous et je vous répondrai dès que possible."
+      },
+      "sections": {
+        "skills": "Compétences",
+        "experienceEducation": "Expérience & Formation",
+        "projects": "Projets",
+        "contact": "Contact"
+      }
+    }
+  }
