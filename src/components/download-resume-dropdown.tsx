@@ -14,8 +14,8 @@ type DownloadResumeDropdownProps = {
   children: React.ReactNode
 }
 
-export const DownloadResumeDropdown = ({ children }: DownloadResumeDropdownProps) => {
-  const { language } = useLanguage()
+export const DownloadResumeDropdown = ({ }: DownloadResumeDropdownProps) => {
+  useLanguage()
 
   return (
     <DropdownMenu>
