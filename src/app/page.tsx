@@ -37,6 +37,16 @@ export default function Portfolio() {
 
   const [activeTab, setActiveTab] = useState("about")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error'
+    message: string
+  } | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -57,6 +67,51 @@ export default function Portfolio() {
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault()
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        }),
+      })
+
+      if (!response.ok) throw new Error('Failed to send message')
+
+      setSubmitStatus({
+        type: 'success',
+        message: 'Message sent successfully! I will get back to you soon.'
+      })
+      setFormData({ name: '', email: '', message: '' })
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again later.'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -288,26 +343,68 @@ export default function Portfolio() {
                 <CardDescription>{data.ui.contact.formDescription}</CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
                       <label htmlFor="name">{data.ui.contact.name}</label>
-                      <Input id="name" placeholder={data.ui.contact.namePlaceholder} />
+                      <Input 
+                        id="name" 
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder={data.ui.contact.namePlaceholder}
+                        disabled={isSubmitting}
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email">{data.ui.contact.email}</label>
-                      <Input id="email" placeholder={data.ui.contact.emailPlaceholder} type="email" />
+                      <Input 
+                        id="email" 
+                        name="email"
+                        type="email" 
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder={data.ui.contact.emailPlaceholder}
+                        disabled={isSubmitting}
+                        required
+                      />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="message">{data.ui.contact.message}</label>
-                    <Textarea id="message" placeholder={data.ui.contact.messagePlaceholder} />
+                    <Textarea 
+                      id="message" 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder={data.ui.contact.messagePlaceholder}
+                      disabled={isSubmitting}
+                      required
+                    />
                   </div>
-                  <Button type="submit">{data.ui.buttons.sendMessage}</Button>
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full sm:w-auto"
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center gap-2">
+                        <span className="h-4 w-4 border-2 border-current border-r-transparent rounded-full animate-spin" />
+                        Sending...
+                      </span>
+                    ) : (
+                      data.ui.buttons.sendMessage
+                    )}
+                  </Button>
+                  {submitStatus && (
+                    <p className={`text-sm ${submitStatus.type === 'success' ? 'text-green-500' : 'text-red-500'}`}>
+                      {submitStatus.message}
+                    </p>
+                  )}
                 </form>
               </CardContent>
             </Card>
-          
           </motion.div>
         </section>
       </main>

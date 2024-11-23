@@ -35,7 +35,27 @@ git clone https://github.com/your-repo/personal-portfolio.git
 npm install
 ```
 
-3. Start the development server:
+
+
+3. Create a `.env.local` file in the root directory with the following variables:
+
+```bash
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=xyz@gmail.com
+SMTP_PASS=xyzPassword
+CONTACT_EMAIL=xyz@gmail.com 
+```
+
+Note: For Gmail, you'll need to:
+    1. Enable 2-factor authentication
+    2. Generate an App Password:
+        - Go to Google Account settings
+        - Security > 2-Step Verification > App passwords
+        - Generate a new app password for "Mail"
+        - Use this generated password as SMTP_PASS
+
+4. Start the development server:
 
 ```bash
 npm run dev
