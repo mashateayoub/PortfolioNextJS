@@ -107,7 +107,7 @@ export default function Portfolio() {
     } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: 'Failed to send message. Please try again later.'
+        message: error instanceof Error ? error.message : 'An error occurred'
       })
     } finally {
       setIsSubmitting(false)
