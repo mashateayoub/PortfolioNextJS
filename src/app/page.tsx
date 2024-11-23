@@ -86,7 +86,11 @@ export default function Portfolio() {
                 <Link 
                   key={tab}
                   href={`#${tab}`}
-                  className={`transition-colors hover:text-primary ${activeTab === tab ? "text-primary" : "text-muted-foreground"}`}
+                  className={`transition-colors hover:text-primary ${
+                    activeTab === tab 
+                      ? "text-primary" 
+                      : "text-foreground/80 hover:text-foreground"
+                  }`}
                 >
                   {data.ui.nav[tab as keyof typeof data.ui.nav]}
                 </Link>
@@ -110,7 +114,11 @@ export default function Portfolio() {
                     key={tab}
                     href={`#${tab}`}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`transition-colors hover:text-primary ${activeTab === tab ? "text-primary" : "text-muted-foreground"}`}
+                    className={`transition-colors hover:text-primary ${
+                      activeTab === tab 
+                        ? "text-primary" 
+                        : "text-foreground/80 hover:text-foreground"
+                    }`}
                   >
                     {data.ui.nav[tab as keyof typeof data.ui.nav]}
                   </Link>

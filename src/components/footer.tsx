@@ -30,7 +30,7 @@ export function Footer() {
               href="https://nextjs.org"
               target="_blank"
               rel="noreferrer"
-              className="font-medium underline underline-offset-4 hover:text-primary"
+              className="font-medium text-foreground hover:text-primary transition-colors"
             >
               Next.js
             </Link>
@@ -39,7 +39,7 @@ export function Footer() {
               href="https://ui.shadcn.com"
               target="_blank"
               rel="noreferrer"
-              className="font-medium underline underline-offset-4 hover:text-primary"
+              className="font-medium text-foreground hover:text-primary transition-colors"
             >
               shadcn/ui
             </Link>
@@ -48,7 +48,7 @@ export function Footer() {
               href="https://v0.dev"
               target="_blank"
               rel="noreferrer"
-              className="font-medium underline underline-offset-4 hover:text-primary"
+              className="font-medium text-foreground hover:text-primary transition-colors"
             >
               v0
             </Link>
@@ -57,7 +57,7 @@ export function Footer() {
               href="https://cursor.sh"
               target="_blank"
               rel="noreferrer"
-              className="font-medium underline underline-offset-4 hover:text-primary"
+              className="font-medium text-foreground hover:text-primary transition-colors"
             >
               Cursor
             </Link>
